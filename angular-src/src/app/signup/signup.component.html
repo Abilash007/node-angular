@@ -1,0 +1,35 @@
+<form #signup="ngForm" (ngSubmit)="postSignUp(signup.value)">
+    <div class="form-group">
+        <label for="Name">Full Name:</label>
+        <input type="text" class="form-control" name="Name" ngModel required>
+      </div>
+  <div class="form-group">
+    <label for="loginName">Login Name:</label>
+    <input type="text" class="form-control" name="loginName" ngModel required>
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" class="form-control" name="password" ngModel required>
+  </div>
+  <div class="form-group">
+    <label for="cpassword">Confirm Password:</label>
+    <input type="password" class="form-control" name="cpassword" ngModel required>
+  </div>
+  <div style="display:inline">
+  <div class="radio">
+    <label><input type="radio" value="male" name="gender" ngModel>Male</label>
+  </div>
+  <div class="radio">
+    <label><input type="radio" value="female" name="gender" ngModel> Female</label>
+  </div>
+</div>
+<div class="form-group">
+  <label for="dob">DOB:</label>
+  <input type="date" class="form-control" name="dob" ngModel required>
+</div>
+<div class="form-group">
+  <label for="mobile">Mobile:</label>
+  <input type="text" class="form-control" name="mobile" ngModel required>
+</div>
+  <button [disabled]="!signup.valid" type="submit" class="btn btn-default">Submit</button>
+</form>
